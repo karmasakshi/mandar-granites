@@ -1,20 +1,37 @@
 import '@page-styles/global.scss';
+import splitbee from '@splitbee/web';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { FunctionComponent, ReactElement } from 'react';
+import { FunctionComponent, ReactElement, useEffect } from 'react';
+import { version } from '../package.json';
 
-const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps): ReactElement => (
+const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps): ReactElement => {
 
-  <>
+  useEffect((): void => {
 
-    <Head>
-      <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
-    </Head>
+    splitbee.init({
+      apiUrl: '/sb-api',
+      scriptUrl: '/sb.js'
+    });
 
-    <Component {...pageProps} />
+    splitbee.user.set({ appVersion: version });
 
-  </>
+  }, []);
 
-);
+  return (
+
+    <>
+
+      <Head>
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
+      </Head>
+
+      <Component {...pageProps} />
+
+    </>
+
+  );
+
+};
 
 export default MyApp;

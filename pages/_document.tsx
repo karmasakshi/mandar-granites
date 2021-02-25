@@ -1,7 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 const applicationName: string = 'Mandar Granites';
-const description: string = 'Premium granites from coveted mines of India.';
+const description: string = 'Premium granites, sourced from coveted mines of India.';
 const domain: string = 'https://mandargranites.com';
 const keywords: string = 'mandar, granites, mumbai, bombay, andheri, india, marble, stone, buy, lakha, red';
 const ogImageUrl: string = domain + '/icons/og-image.jpg';
@@ -60,7 +60,7 @@ class MyDocument extends Document {
 
         </Head>
 
-        <body className="antialiased leading-relaxed">
+        <body className="antialiased">
           <Main />
           <NextScript />
         </body>
