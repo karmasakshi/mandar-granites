@@ -6,7 +6,8 @@
     "serve": "next dev",
     "prestart": "npm run build",
     "start": "next start",
-    "precommit": "npm run build",
+    "lint": "npx --no-install eslint . --ext .js,.jsx,.ts,.tsx",
+    "precommit": "npm run lint && npm run build",
     "commit": "git add . && npx --no-install cz",
     "dry-release": "npx --no-install standard-version --dry-run",
     "release": "npx --no-install standard-version && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
@@ -15,8 +16,8 @@
     "release-patch": "npx --no-install standard-version --release-as patch && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
     "add-dependencies": "npm add next react react-dom",
     "remove-dependencies": "npm remove next react react-dom",
-    "add-devDependencies": "npm add --save-dev @types/node @types/react cz-conventional-changelog standard-version typescript",
-    "remove-devDependencies": "npm remove @types/node @types/react cz-conventional-changelog standard-version typescript",
+    "add-devDependencies": "npm add --save-dev @types/node @types/react @typescript-eslint/eslint-plugin @typescript-eslint/parser cz-conventional-changelog eslint eslint-plugin-react standard-version typescript",
+    "remove-devDependencies": "npm remove @types/node @types/react @typescript-eslint/eslint-plugin @typescript-eslint/parser cz-conventional-changelog eslint eslint-plugin-react standard-version typescript",
     "reinstall-dependencies": "npm run remove-dependencies && npm run remove-devDependencies && npm run add-dependencies && npm run add-devDependencies",
     "postreinstall-dependencies": "npm run build"
   },
@@ -41,7 +42,11 @@
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "standard-version": "^9.1.1",
     "typescript": "^4.2.2"
   }
