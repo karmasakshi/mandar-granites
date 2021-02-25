@@ -22,22 +22,73 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "arrow-spacing": "warn",
+    "comma-dangle": "warn",
     "indent": [
-      "error",
+      "warn",
       2
     ],
     "linebreak-style": [
       "error",
       "unix"
     ],
+    "no-alert": "warn",
+    "no-console": "warn",
+    "no-empty": "error",
+    "no-shadow": "error",
+    "no-unused-vars": "off",
+    "padded-blocks": "warn",
+    "prefer-const": "warn",
     "quotes": [
-      "error",
+      "warn",
       "single"
     ],
     "semi": [
-      "error",
+      "warn",
       "always"
     ],
-    "react/react-in-jsx-scope": "off"
+    "sort-keys": "warn",
+    "space-infix-ops": "error",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowConciseArrowFunctionExpressionsStartingWithVoid": false,
+        "allowDirectConstAssertionInArrowFunctions": false,
+        "allowExpressions": false,
+        "allowHigherOrderFunctions": false,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": [
+      "error",
+      {
+        "allowArgumentsExplicitlyTypedAsAny": false,
+        "allowDirectConstAssertionInArrowFunctions": false,
+        "allowHigherOrderFunctions": false,
+        "allowTypedFunctionExpressions": true,
+        "allowedNames": []
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/typedef": [
+      "warn",
+      {
+        "arrayDestructuring": true,
+        "arrowParameter": true,
+        "memberVariableDeclaration": true,
+        "objectDestructuring": true,
+        "parameter": true,
+        "propertyDeclaration": true,
+        "variableDeclaration": true,
+        "variableDeclarationIgnoreFunction": false
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
