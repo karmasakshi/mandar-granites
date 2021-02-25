@@ -7,7 +7,12 @@
     "release": "npx --no-install standard-version && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
     "release-major": "npx --no-install standard-version --release-as major && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
     "release-minor": "npx --no-install standard-version --release-as minor && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
-    "release-patch": "npx --no-install standard-version --release-as patch && git push --follow-tags && git checkout main && git merge development && git push && git checkout development"
+    "release-patch": "npx --no-install standard-version --release-as patch && git push --follow-tags && git checkout main && git merge development && git push && git checkout development",
+    "add-dependencies": "npm add ",
+    "remove-dependencies": "npm remove ",
+    "add-devDependencies": "npm add --save-dev cz-conventional-changelog standard-version",
+    "remove-devDependencies": "npm remove cz-conventional-changelog standard-version",
+    "reinstall-dependencies": "npm run remove-dependencies && npm run remove-devDependencies && npm run add-dependencies && npm run add-devDependencies"
   },
   "repository": {
     "type": "git",
