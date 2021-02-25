@@ -28,10 +28,6 @@
   "license": "Unlicense",
   "private": true,
   "homepage": "https://github.com/karmasakshi/mandar-granites#readme",
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0",
-    "standard-version": "^9.1.1"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -41,5 +37,9 @@
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "standard-version": "^9.1.1"
   }
 }
