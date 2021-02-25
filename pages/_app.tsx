@@ -1,11 +1,20 @@
-import '@styles/global.scss';
+import '@page-styles/global.scss';
 import { AppProps } from 'next/app';
-import { ReactElement } from 'react';
+import Head from 'next/head';
+import { FunctionComponent, ReactElement } from 'react';
 
-function MyApp({ Component, pageProps }: AppProps): ReactElement {
+const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps): ReactElement => (
 
-  return <Component {...pageProps} />;
+  <>
 
-}
+    <Head>
+      <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
+    </Head>
+
+    <Component {...pageProps} />
+
+  </>
+
+);
 
 export default MyApp;

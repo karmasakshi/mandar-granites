@@ -20,7 +20,6 @@
     "baseUrl": "./",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -34,11 +33,11 @@
       "@interfaces/*": [
         "interfaces/*"
       ],
+      "@page-styles/*": [
+        "page-styles/*"
+      ],
       "@services/*": [
         "services/*"
-      ],
-      "@styles/*": [
-        "styles/*"
       ]
     }
   },
