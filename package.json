@@ -1,0 +1,13 @@
+{
+  "name": "mandar-granites",
+  "version": "0.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karmasakshi/mandar-granites.git"
+  },
+  "author": "Karmasakshi Goyal <karmasakshi@users.noreply.github.com> (https://karmasakshi.com)",
+  "license": "Unlicense",
+  "private": true,
+  "homepage": "https://github.com/karmasakshi/mandar-granites#readme"
+}
