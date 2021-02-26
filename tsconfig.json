@@ -33,11 +33,11 @@
       "@interfaces/*": [
         "interfaces/*"
       ],
-      "@page-styles/*": [
-        "page-styles/*"
-      ],
       "@services/*": [
         "services/*"
+      ],
+      "@styles/*": [
+        "styles/*"
       ]
     }
   },

@@ -1,5 +1,5 @@
-import '@page-styles/global.scss';
 import splitbee from '@splitbee/web';
+import '@styles/global.scss';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { FunctionComponent, ReactElement, useEffect } from 'react';
