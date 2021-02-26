@@ -2,7 +2,7 @@ import Page from '@components/page/page';
 import Image from 'next/image';
 import { FunctionComponent, ReactElement } from 'react';
 
-const Home: FunctionComponent = (): ReactElement => (
+const Index: FunctionComponent = (): ReactElement => (
 
   <Page title="">
 
@@ -25,4 +25,4 @@ const Home: FunctionComponent = (): ReactElement => (
 
 );
 
-export default Home;
+export default Index;
